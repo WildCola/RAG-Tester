@@ -24,16 +24,22 @@ Current version uses llama.cpp, therefore **GGUF models are required**. For test
 **IMPORTANT**: To be able to load indexes, first they must be generated and stored. The `storage_generation` notebook under the `notebooks` folder can be used to generate the indexes and store them in the `storage` folder. The notebook uses the [BGE base embedding model](https://huggingface.co/BAAI/bge-base-en-v1.5), but feel free to try with others.
 
 ## Usage
-1. Run the app
+1. **Download the model(s)** you want to use and store them in the `models` folder.
+
+2. **Store your documents** in the 'data' folder. (Tested with .pdf files)
+
+3. **Generate the indexes** for the documents using the `storage_generation` notebook under the `notebooks` folder.
+
+4. **Run the app**
     ```bash
     python app.py
     ```
 
-2. Select the model you want to use (A command prompt will show you available models from your models folder) by using the corresponding number appearing in the list.
+5. **Select the model you want to use** (A command prompt will show you available models from your models folder) by using the corresponding number appearing in the list.
 
-3. Wait for the Gradio app to deploy and then open it in your browser.
+6. Wait for the Gradio app to deploy and then open it in your browser.
 
-4. Select your desired parameters and ask your question!
+7. Select your desired parameters and ask your question!
 
 ## Logs
 Manual logs in the form of a single .json file has been created and stored in the `log` folder. 

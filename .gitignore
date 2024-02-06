@@ -1,8 +1,6 @@
 # Ignore all files inside the storage, models and data folder
 /storage/*
-/data/*
-/models/*
-!models/.gitkeep
+
 
 # Ignore pycache
 __pycache__/
