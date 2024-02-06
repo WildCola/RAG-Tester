@@ -1,0 +1,26 @@
+# Ignore all files inside the storage, models and data folder
+/storage/*
+/data/*
+/models/*
+
+# Ignore pycache
+__pycache__/
+
+# Ignore any venv, including most common venv names
+.venv
+venv
+ENV/
+env/
+
+# Ignore files
+*.json
+*.pdf
+*.xlsx
+*.csv
+*.docx
+*.doc
+*.code-workspace
+
+# Specific
+app_copy.py
+notebooks/playground.ipynb
