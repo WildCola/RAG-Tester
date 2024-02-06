@@ -18,7 +18,8 @@ test performance of the model when changing different parameters.
     pip install -r requirements.txt
     ```
 Current version uses llama.cpp, therefore **GGUF models are required**. For test purposes,
-[Mistral 7b Instruct v0.2](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF) and [Llama 2 13b Chat](https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF) provided by TheBloke were used. Please download models **BEFORE** running the app.
+[Mistral 7b Instruct v0.2](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF) and [Llama 2 13b Chat](https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF) provided by TheBloke were used. Please download models **BEFORE** running the app and store them in the 
+`models` folder.
 
 **IMPORTANT**: To be able to load indexes, first they must be generated and stored. The `storage_generation` notebook under the `notebooks` folder can be used to generate the indexes and store them in the `storage` folder. The notebook uses the [BGE base embedding model](https://huggingface.co/BAAI/bge-base-en-v1.5), but feel free to try with others.
 
