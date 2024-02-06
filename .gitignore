@@ -2,6 +2,7 @@
 /storage/*
 /data/*
 /models/*
+!models/.gitkeep
 
 # Ignore pycache
 __pycache__/
