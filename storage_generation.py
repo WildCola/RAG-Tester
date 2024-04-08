@@ -8,8 +8,8 @@ from llama_index import (
     StorageContext,
     load_index_from_storage,
 )
-from llama_index.embeddings import HuggingFaceEmbedding
-from llama_index.llms import LlamaCPP
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.llms.llama_cpp import LlamaCPP
 from llama_index.llms.llama_utils import (
     messages_to_prompt,
     completion_to_prompt,
