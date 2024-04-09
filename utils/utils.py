@@ -27,7 +27,7 @@ Query:
 {query_str}
 ---------------------"""
 EMPTY_RESPONSE = "Apologies, given that the question is not related to the European Parliament or the context provided did not give enough information, I cannot answer that question."
-MODEL_PATH = "models/starling-lm-7b-alpha.Q5_K_M.gguf"
+MODEL_PATH = 'models/zephyr-7b-beta.Q5_K_M.gguf' # "models/starling-lm-7b-alpha.Q5_K_M.gguf'
 EMBEDDING_MODEL = 'sentence-transformers/all-MiniLM-L6-v2' # "intfloat/e5-large-v2" # "BAAI/bge-base-en-v1.5"  # BAAI/bge-base-en-v1.5   EuropeanParliament/eubert_embedding_v1
 RERANKER = "BAAI/bge-reranker-base"
 SEMANTIC_CHUNKER = False
