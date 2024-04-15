@@ -68,6 +68,7 @@ def generate_hyde_answers(query):
 
 
 def generate_sub_queries(llm, query):
+    # TODO: fix errors
     query_generator = LLMQuestionGenerator(llm_predictor=llm, prompt=query)
     sub_queries = query_generator.generate(tools=[], query=query)
     return sub_queries  
