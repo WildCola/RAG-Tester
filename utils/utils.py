@@ -7,8 +7,8 @@ from datetime import datetime
 # Constants
 SIMILARITY_TOP_K = 15
 RERANKER_TOP_N = 3
-SIMILARITY_CUTOFF = 0.3
-QA_PROMPT = """You are an expert on Rules of Procedure of the European Parliament.
+SIMILARITY_CUTOFF = 0.25
+QA_PROMPT = """You are an expert on world politics and issues. You have access to a database of questions and answers from european parliamentaries so your specialties are European politics and European institutions such as the European Parliament (EP), the European Commission (EC) and the European Union (EU) as a whole.
 Context information is below.
 
 ---------------------
@@ -16,19 +16,21 @@ Context information is below.
 ---------------------
 
 Given the context information and NOT prior knowledge, answer the query.
-Answer the query ONLY in relation to the European Parliament.
+Make the answers you give as detailed as possible, don't leave out any possible relevant information.
+If you find conflicting context information prioritize the more recent one.
+When mentioning events be sure to provide their dates.
+NEVER use ambigous time descriptors such as 'now' or 'soon', ALWAYS ground your answers to a clear timeframe.
 AVOID using phrases like 'Based on the given context', 'Based on the provided context', 'Based on the information provided',
 'As an expert on' or similar.
 Do not mention the pdf provided.
-DO NOT mention the article of the Rules of Procedure.
 
 Query:
 --------------------
 {query_str}
 ---------------------"""
 EMPTY_RESPONSE = "Apologies, given that the question is not related to the European Parliament or the context provided did not give enough information, I cannot answer that question."
-MODEL_PATH = "models/sciphi-self-rag-mistral-7b-32k.Q8_0.gguf"
-EMBEDDING_MODEL = 'sentence-transformers/all-mpnet-base-v2' # "intfloat/e5-large-v2" # "BAAI/bge-base-en-v1.5"  # BAAI/bge-base-en-v1.5   EuropeanParliament/eubert_embedding_v1
+MODEL_PATH = "models/mixtral-8x7b-instruct-v0.1.Q8_0.gguf" # "models/mixtral-8x7b-instruct-v0.1.Q3_K_M.gguf"
+EMBEDDING_MODEL = 'sentence-transformers/all-mpnet-base-v2' # "intfloat/e5-large-v2" #   # "BAAI/bge-base-en-v1.5"    EuropeanParliament/eubert_embedding_v1
 RERANKER = "BAAI/bge-reranker-base"
 SEMANTIC_CHUNKER = False
 
